@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局 - 左中右三栏布局</title>
+    <link rel="stylesheet" href="../css/notes.css" />
+    <style>
+    /* layout */
+    body{ line-height:50px; color: #000; font-size: 14px; text-indent: 24px; } 
+    pre{ width: 96%; margin: 0 auto; color: #000; background: #fff; padding: 5px; text-indent: 0; line-height: 1.5; }
+    html, body{
+        height: 100%;
+    } 
+    .m-wrap{
+        height: 100%;
+        padding: 0 200px;
+    }
+    .m-left, .m-right{
+        width: 200px; height: 100%;
+        background: #cbfafc;
+        position: relative;
+    }
+    .m-left{
+        float: left; 
+        margin-left: -100%;
+        left: -200px;
+    }
+    .m-right{
+        float: right;
+        margin-left: -200px;
+        right: -200px;;
+    }
+    .m-cont{
+        background: #fac9c5;
+        width: 100%;
+        min-height: 100%;
+        float: left; 
+    }
+    </style>
+</head>
+<body>
+
+<div class="m-wrap">
+    <div class="m-cont">
+        <pre>
+        圣杯布局: 
+        1. 内容容器排在最前 
+        2. 都通过浮动来布局
+        3. 通过负值margin进行调整 左边和右边的位置
+        4. 在父容器上设置padding的左右补白和左右容器一样, 在对左右容器进行相对定位
+        </pre>
+    </div>
+    <div class="m-left">左边</div>
+    <div class="m-right">右边</div> 
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局 - 左中右三栏布局</title>
+    <link rel="stylesheet" href="../css/notes.css" />
+    <style>
+    /* layout */
+    body{ line-height:50px; color: #000; font-size: 14px; text-indent: 24px; } 
+    pre{ width: 96%; margin: 0 auto; color: #000; background: #fff; padding: 5px; text-indent: 0; line-height: 1.5; }
+    html, body{
+        height: 100%;
+    } 
+    .m-wrap{
+        height: 100%;
+    }
+    .m-left, .m-right{
+        width: 200px; height: 100%;
+        background: #cbfafc;
+    }
+    .m-left{
+        float: left; 
+    }
+    .m-right{
+        float: right;
+    }
+    .m-cont{
+        background: #fac9c5;
+        min-height: 100%;
+        margin: 0 200px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="m-wrap">
+    <div class="m-left">左边</div>
+    <div class="m-right">右边</div>
+    <div class="m-cont">
+        <pre>
+        内容
+        方式一： 左右浮动, 中间区域自适应
+
+        浮动布局
+        先来设置左、右栏目浮动到左右两边, 因为是浮动会脱离文档流, 则内容容器会撑满全屏
+        内容容器只需要设置margin的left和right留出空间即可 
+        
+        优点: 简单 - 结果固定, 内容容器必须放在后面
+
+        缺点: 最后加载, 内容多时可能影响体验
+
+        .m-left, .m-right{
+            width: 200px; height: 100%;
+            background: #cbfafc;
+        }
+        .m-left{
+            float: left; 
+        }
+        .m-right{
+            float: right;
+        }
+        .m-cont{
+            background: #fac9c5;
+            min-height: 100%;
+            margin: 0 200px;
+        }
+        </pre>
+    </div>
+</div>
+
+</body>
+</html>

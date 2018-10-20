@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局 - 上中下一栏布局 - 内容不足一屏时页脚在浏览器底部</title>
+    <link rel="stylesheet" href="../css/notes.css" />
+    <style>
+    /* layout */
+    body{ line-height:50px; color: #000; font-size: 14px; text-indent: 24px; }
+    html, body{
+        height: 100%;
+    }
+    pre{ width: 96%; margin: 0 auto; color: #f60; background: #fff; padding: 5px; text-indent: 0; line-height: 1.5; }
+    .m-header{
+        height: 50px; background: #65c9fb;
+        margin-bottom: -50px; 
+        position: relative;
+    }
+    .m-footer{
+        height: 50px; background: #99c9f9; 
+        margin-top: -50px;
+    }
+    .m-maincont{
+        min-height: 100%; background: #c9fbfa;
+        padding: 50px 0;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+
+<header class="m-header">页头</header>
+<section class="m-maincont">
+    主体内容区域
+    <pre>
+    内容不足一屏时页脚在浏览器底部
+
+    利用 box-sizing 怪异盒模型  
+    .m-header{
+        height: 50px; background: #65c9fb;
+        margin-bottom: -50px; 
+        position: relative; 
+    }
+    .m-footer{
+        height: 50px; background: #99c9f9; 
+        margin-top: -50px;
+    }
+    .m-maincont{
+        min-height: 100%; background: #c9fbfa;
+        padding: 50px 0;
+        box-sizing: border-box;
+    }
+    </pre> 
+</section>
+<footer class="m-footer">页脚</footer>
+    
+</body>
+</html>

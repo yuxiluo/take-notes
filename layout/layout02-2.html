@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局 - 左右两栏布局</title>
+    <link rel="stylesheet" href="../css/notes.css" />
+    <style>
+    /* layout */
+    body{ line-height:50px; color: #000; font-size: 14px; text-indent: 24px; } 
+    pre{ width: 96%; margin: 0 auto; color: #000; background: #fff; padding: 5px; text-indent: 0; line-height: 1.5; }
+    html, body{
+        height: 100%;
+    } 
+    .m-left{
+        background: #c9fbf8;
+        position: absolute; left: 0;
+        width: 200px;
+        height: 100%;
+    }
+    .m-cont{
+        background: #fac9c3; 
+        height: 100%; 
+        margin-left: 200px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="m-left">左侧</div>
+<div class="m-cont">
+    <pre>
+        左右两栏布局
+        方式三: 定位布局 
+    </pre>
+</div> 
+
+</body>
+</html>

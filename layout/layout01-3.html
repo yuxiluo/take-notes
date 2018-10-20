@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局 - 上中下一栏布局 - 内容不足一屏时页脚在浏览器底部</title>
+    <link rel="stylesheet" href="../css/notes.css" />
+    <style>
+    /* layout */
+    body{ line-height:50px; color: #000; font-size: 14px; text-indent: 24px; } 
+    pre{ width: 96%; margin: 0 auto; color: #000; background: #fff; padding: 5px; text-indent: 0; line-height: 1.5; }
+    html, body{
+        height: 100%;
+    }
+    .m-wrapouter{
+        position: relative;
+        min-height: 100%;
+    }
+    .m-header{
+        height: 50px; background: #65c9fb; 
+    }
+    .m-footer{
+        height: 50px; width: 100%; background: #99c9f9;  
+        position: absolute; bottom: 0;
+    }
+    .m-maincont{
+        background: #c9fbfa;  
+        padding-bottom: 60px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="m-wrapouter">
+    <header class="m-header">页头</header>
+    <section class="m-maincont">
+        主体内容区域
+        <pre>
+        内容不足一屏时页脚在浏览器底部 
+        
+        html, body{
+            height: 100%;
+        }
+        .m-wrapouter{
+            外层父元素, 相对定位, 必须写min-height 
+            position: relative; 
+            min-height: 100%;
+        }
+        .m-header{
+            height: 50px; background: #65c9fb; 
+        }
+        .m-footer{
+            height: 50px; width: 100%; background: #99c9f9;  
+            position: absolute; bottom: 0; 页脚绝对定位
+        }
+        .m-maincont{
+            background: #c9fbfa;  
+            padding-bottom: 60px; 内容区域向下补白页脚的高度
+        }
+        </pre> 
+    </section>
+    <footer class="m-footer">页脚</footer>
+</div>    
+
+</body>
+</html>

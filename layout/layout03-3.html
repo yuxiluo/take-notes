@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双飞翼布局 - 左中右三栏布局</title>
+    <link rel="stylesheet" href="../css/notes.css" />
+    <style>
+    /* layout */
+    body{ line-height:50px; color: #000; font-size: 14px; text-indent: 24px; } 
+    pre{ width: 96%; margin: 0 auto; color: #000; background: #fff; padding: 5px; text-indent: 0; line-height: 1.5; }
+    html, body{
+        height: 100%;
+    } 
+    .m-wrap{
+        height: 100%; 
+    }
+    .m-left, .m-right{
+        width: 200px; height: 100%;
+        background: #cbfafc; 
+    }
+    .m-left{
+        float: left; 
+        margin-left: -100%; 
+    }
+    .m-right{
+        float: right;
+        margin-left: -200px; 
+    }
+    .m-cont{
+        background: #fac9c5;
+        width: 100%;
+        min-height: 100%;
+        float: left; 
+    }
+    .m-cont .main{
+        margin: 0 200px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="m-wrap">
+    <div class="m-cont">
+        <div class="main">
+            <pre>
+            圣杯布局: 
+            1. 内容容器排在最前 
+            2. 都通过浮动来布局 
+            3. 通过负值margin进行调整 左边和右边的位置
+            4. 在内容容器中必须嵌套一层, 然后设置margin的left和right值来避开遮挡  
+            </pre>
+        </div> 
+    </div>
+    <div class="m-left">左边</div>
+    <div class="m-right">右边</div> 
+</div>
+
+</body>
+</html>
